@@ -1,215 +1,140 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>Thomas Wollmann - Development Server</title>
-		<link rel="SHORTCUT ICON" href="img/favicon.png" type="image/x-icon">
 
-		<meta name="ROBOTS" content="NOARCHIVE" />
-		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
-			/**
-			 * Rotator
-			 */
-			( function($) {
-					var default_config = {
-						fadeIn : 3000,
-						stay : 3000,
-						fadeOut : 3000
-					};
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-					function fade(index, $elements, config) {
-						$elements.eq(index).fadeIn(config.fadeIn).delay(config.stay).fadeOut(config.fadeOut, function() {
-							fade((index + 1) % $elements.length, $elements, config);
-						});
-					}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-					$.fn.fadeLoop = function(config) {
-						fade(0, this, $.extend({}, default_config, config));
-						return this;
-					};
+        #box {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
 
-				}(jQuery));
+        #mycard {
+            background-color: #ffffff;
+            max-width: 500px;
+            min-width: 150px;
+        }
 
-			jQuery(document).ready(function($) {
-				$('#quotes').css("display", "block");
-				$('#quote > li').hide();
-				$('#quote > li').fadeLoop({
-					fadeIn : 1000,
-					stay : 10000,
-					fadeOut : 500
-				});
-			});
-		</script>
-	</head>
-	<body style="color: #333; font-family: arial,sans-serif; margin:0px;">
-		<div style="text-align: right; font-size: small; background: #f2f2f2; border-bottom: 1px solid #e4e4e4; line-height: 40px; min-width: 350px; padding-top:0; padding-right:5px;">
-			<div style="float:left;padding-left:5px; padding-top:auto;padding-bottom:auto;">
-				<a href="https://www.linkedin.com/in/thomas-wollmann-876054185/" target="blanc">
-					<img src="img/linkedin-logo.png" height="30" style="margin-top:5px;margin-bottom:5px;border:0;" alt="linkedin logo" />
-				</a>
-			</div>
-			<div style="float:left;padding-left:5px; padding-top:auto;padding-bottom:auto;">
-				<a href="https://www.xing.com/profile/Thomas_Wollmann8" target="blanc">
-					<img src="img/xing-logo.jpg" height="30" style="margin-top:5px;margin-bottom:5px;border:0;" alt="xing logo" />
-				</a>
-			</div>
-			<div style="float:left;padding-left:5px; padding-top:auto;padding-bottom:auto;">
-				<a href="https://scholar.google.de/citations?user=H8tlV-oAAAAJ" target="blanc">
-					<img src="img/google-logo.png" height="30" style="margin-top:5px;margin-bottom:5px;border:0;" alt="google logo" />
-				</a>
-			</div>
-			<div style="float:left;padding-left:5px; padding-top:auto;padding-bottom:auto;">
-				<a href="https://researchgate.net/profile/Thomas_Wollmann" target="blanc">
-					<img src="img/researchgate-logo.jpg" height="30" style="margin-top:5px;margin-bottom:5px;border:0;" alt="researchgate logo" />
-				</a>
-			</div>			
-			
-			<b> by Thomas Wollmann</b>
-		</div>
-		<div style="text-align: center; margin-top:50px;">
-			<h1 style="margin-bottom:0px;  font-weight: 200;font-size: 48px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);">Development Server</h1>
-			<div id="quotes" style="display:none;">
-				<ul id="quote">
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Computer sind die kl&uuml;gsten Idioten die es gibt. - Norman Mailer</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> There are 10 types of people in the world... those who understand binary and those who don't.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Nicht als ob man meinte, die Liebe sei nicht so wichtig. Die Menschen hungern geradezu danach; sie sehen sich unz&auml;hlige Filme an. die von gl&uuml;cklichen oder ungl&uuml;cklichen Liebesgeschichten handeln, sie h&ouml;ren sich Hunderte von kitschigen Liebesliedern an - aber kaum einer nimmt an, dass man etwas tun muss, wenn man es lernen will zu lieben. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Was immer geschieht: Nie d&uuml;rft ihr so tief sinken, von dem Kakao, durch den man euch zieht, auch noch zu trinken. - Erich Kästner</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it. – Dan Ariely</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die, die grundlegende Freiheiten aufgeben, um vor&uuml;bergehend ein wenig Sicherheit zu bekommen, verdienen weder Freiheit noch Sicherheit. - Benjamin Franklin</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Hunderte gehen. Eine Handvoll bleibt. Nur einer blickt zur&uuml;ck. - 300</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Kinder lernen in der Schule, da&szlig; Ehrlichkeit, Lauterkeit und die Sorge um das Seelenheil die leitenden Prinzipien des Lebens sein sollten, w&auml;hrend das 'Leben' lehrt, da&szlig; die Befolgung diese Grunds&auml;tze uns bestenfalls zu weltfremden Tr&auml;umern macht. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ein Hacker ist ein Mensch, der mit seiner Kaffeemaschine auch eine Suppe kochen kann - Wau Holland</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Hier verleiht nur der Verstand Macht. - Batman Begins</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> So many people live within unhappy circumstances and yet will not take the initiative to change their situation because they are conditioned to a life of security, conformity, and conservatism, all of which may appear to give one peace of mind, but in reality nothing is more dangerous to the adventurous spirit within a man than a secure future. The very basic core of a man's living spirit is his passion for adventure. The joy of life comes from our encounters with new experiences, and hence there is no greather joy than to have an endlessly changing horizon, for each day to have a new and different sun. - Chris McCandless</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Liebe hei&szlig;t, dass wir uns dem anderen ganz ohne Garantie ausliefern. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> I'll tell you a riddle. You're waiting for a train, a train that will take you far away. You know where you hope this train will take you, but you don't know for sure. But it doesn't matter. How can it not matter to you where that train will take you? - Inception</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Computer sind nutzlos. Sie geben uns nur Antworten. - Pablo Picasso</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> It is not clear that intelligence has any long-term survival value. - Stephen Hawking </p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Im Kern eines guten Witzes steckt immer eine Katastrophe - George Tabori</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das Ende, die unvermeidliche Apokalypse, sehe ich f&uuml;r unsere Wirklichkeit, den totalen Zusammenbruch aller Systeme als Folge unserer Abwendung von allem, was wahr in uns ist. - Assi Dayan</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer sagt: hier herrscht Freiheit, der l&uuml;gt, denn Freiheit herrscht nicht - Erich Fried</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Unwissenheit ist ein Segen. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ziehe niemals in den Krieg, vorallem nicht mit dir selbst. - Lord of War</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> in /dev/null nobody can hear you scream!</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das, wobei unsere Berechnungen versagen, nennen wir Zufall. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Confront your soldiers with the deed itself; never let them know your design - Sun-Tzu</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Bizarre Kl&auml;nge durchstr&ouml;men unseren Geist. Monotonie legt unser Denken lahm. Maschinen machen Musik und wir alle werden danach tanzen...wohlwollend - Bernd Sch&ouml;nburg</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das Leben kommt auf alle F&auml;lle aus einer Zelle, doch manchmal endets auch - bei Strolchen - in einer solchen. - Heinz Erhardt</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Vorteil der Klugheit besteht darin, da&szlig; man sich dumm stellen kann. Das Gegenteil ist schon schwieriger. - Kurt Tucholsky</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Was ist die Matrix? Kontrolle. Die Matrix ist eine Computergenerierte Traumwelt, die erschaffen wurde um uns unter Kontrolle zu halten. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Was ist die Wirklichkeit? Wie definiert man das: Realit&auml;t? Wenn du darunter verstehst, was du f&uuml;hlst, riechen, schmecken oder sehen kannst ist Wirklichkeit nichts weiter als elektrische Signale interpretiert von deinem Verstand. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Eine der &uuml;belsten Dinge ist es, einen Menschen von der Kommunikation auszuschliessen. - Wau Holland</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Erst wenn die letzte Kritik zensiert, die letzte Satire gel&ouml;scht, Und der letzte Internetuser erfasst ist, werdet ihr merken, dass es im Netz immer noch Kinderpornografie gibt.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Computer rechnet mit allem nur nicht mit seinem Besitzer. - Dieter Hildebrandt</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Every one sees what you appear to be, few really know what you are. -  Niccolo Machiavelli</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Manchmal muss man verstummen, um geh&ouml;rt zu werden.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ich will nicht sagen: "Weinet nicht", denn nicht alle Tr&auml;nen sind von &Uuml;bel. - Gandalf</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Auge um Auge - und die ganze Welt wird blind sein. - Mahatma Gandhi</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Computer ist die logische Weiterentwicklung des Menschen: Intelligenz ohne Moral. - John James Osborne </p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Konsument ist der ewige S&auml;ugling, der nach der Flasche schreit. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> F&uuml;r den Triumph des B&ouml;sen reicht es, wenn die Guten nichts tun! - Edmund Bruke</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es ist besser eine Frage zu diskutieren, ohne sie zu entscheiden, als eine Frage zu entscheiden, ohne sie zu diskutieren. - Joseph Joubert</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Marx geht es wie der Bibel: Er wird viel zitiert und kaum verstanden. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Dum spiro, spero. (Solange ich atme, hoffe ich.) - Marcus Tullius Cicero</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Durch die Maschine ist die Zeit zur Beherrscherin des Menschen geworden. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer Visionen hat, sollte zum Arzt gehen. - Helmut Schmidt</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer der Meinung ist, da&szlig; man f&uuml;r Geld alles haben kann, ger&auml;t leicht in den Verdacht, da&szlig; er f&uuml;r Geld alles zu tun bereit ist. - Benjamin Franklin</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Freiheit ist ein Luxus, den sich nicht jedermann gestatten kann. - Otto F&uuml;rst von Bismarck</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Diplomat denkt erst zweimal nach, bevor er nichts sagt - Winston Churchill</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ein alter Mann stirbt. Ein junges M&auml;dchen lebt. Fairer Tausch. - Sin City</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Im Computer kann man Unmengen von Daten speichern, die man nicht br&auml;uchte, wenn man keinen Computer h&auml;tte. - Erhard Blanck</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Alle Revolutionen haben bisher nur eines bewiesen, n&auml;mlich, dass sich vieles &auml;ndern l&auml;&szlig;t, blo&szlig; nicht die Menschen. - Karl Marx</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Mehr als die Vergangenheit interessiert mich die Zukunft, denn in ihr gedenke ich zu leben. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Probleme kann man niemals mit derselben Denkweise l&ouml;sen, durch die sie entstanden sind. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ein Ring sie zu knechten, sie alle zu finden. Ins Dunkle zu treiben, und ewig zu binden. - Sauron</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer k&auml;mpft, kann verlieren. Wer nicht k&auml;mpft, hat schon verloren. - Bertolt Brecht</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Aus gro&szlig;er Kraft folgt gro&szlig;e Verantwortung - Uncle Ben</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wahrheit ist die Erfindung eines L&uuml;gners. - Heinz von Foerster</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es gibt zwei Dinge die unendlich sind. Das Weltall und die Menschliche Dummheit. Beim Weltall bin ich mir aber nicht so sicher - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Man is a pupil, pain is his teacher. - Alfred de Musset</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wegen des fehlenden Nagels ging das Hufeisen verloren. Wegen des fehlenden Hufeisens ging das Pferd verloren. Wegen des verlorengegangenen Pferdes konnte die Nachricht nicht &uuml;berbracht werden. Wegen der nicht &uuml;berbrachten Nachricht wurde der Krieg verloren. - Chinesisches Sprichwort</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wo k&auml;men wir hin, wenn jeder sagte, wo kämen wir hin und keiner ginge, um zu sehen, wohin wir k&auml;men, wenn wir gingen. - Kurt Marti</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die sch&ouml;nsten Tr&auml;ume von Freiheit werden im Kerker getr&auml;umt. - Friedrich Schiller </p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Als du auf die Welt kamst, l&auml;chelten alle, nur du weintest. Lebe so, dass wenn du stirbst alle weinen, nur du l&auml;chelst!</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der Computervirus ist das Tschernobyl der Datenverarbeitung. - Wau Holland</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Hacken ist mehr als nur ein Verbrechen, es ist ein &Uuml;berlebenstraining! - Hackers</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Naturwissenschaft ist der Glaube an die Unwissenheit der Experten. - Richard P. Feynman</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wenn es mehr als eine M&ouml;glichkeit gibt, etwas zu tun, und eine von diesen M&ouml;glichkeiten schief gehen kann, dann kommt irgendwer daher und probiert sie aus. - Edward A. Murphy</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ein alter Mann stirbt. Ein junges M&auml;dchen lebt. Fairer Tausch. - Sin City</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das Sch&ouml;nste, was wir erleben k&ouml;nnen, ist das Geheimnisvolle. Es ist das Grundgef&uuml;hl, das an der Wiege von wahrer Kunst und Wissenschaft steht. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> The purpose of computing is insight, not numbers. - Richard Hamming</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die effiziente Anwendung seiner F&auml;higkeit zur Abstraktion muss als lebenswichtigste Aktivit&auml;t eines kompetenten Programmierers angesehen werden. - Dijkstra, The Humble Programmer</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer glaubt, etwas zu sein, hat aufgeh&ouml;rt, etwas zu werden. - Philip Rosenthal</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> All it takes is one bad day to reduce the sanest man alive to lunacy. That's how far the world is from where i am. Just one bad day. - The Joker</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der &uuml;bern&auml;chste Krieg wird nur noch mit Pfeil und Bogen entschieden. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Man wird am besten f&uuml;r seine Tugenden bestraft. - Friedrich Nietzsche</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wie war's in der Schule? - Hm. - Und was hast du da heute gelernt? - Was Rache ist. - Hackers</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es gibt zwei Dinge, bei deren Herstellung man besser weg schaut, damit einem nicht &uuml;bel wird: Wurst und Gesetze! - Winston Churchill</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Viele sind hartn&auml;ckig in Bezug auf den einmal eingeschlagenen Weg, wenige in Bezug auf das Ziel. - Friedrich Nietzsche</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Waffenh&auml;ndler regieren die Welt, denn die Anderen sind viel zu sehr damit besch&auml;ftigt sich gegenseitig umzubringen. - Lord of War</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Hunderte gehen. Eine Handvoll bleibt. Nur einer blickt zur&uuml;ck. - 300</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es ist das Schicksal des Genies, unverstanden zu bleiben. Aber nicht jeder Unverstandene ist ein Genie. - Ralph Waldo Emerson</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer immer tut, was er schon kann, bleibt immer das, was er schon ist. - Henry Ford</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Software is like Sex, it's best if it's free. - Linus Thorwald, Erfinder von Linux</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Hier verleiht nur der Verstand Macht. - Batman Begins</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Kennst du das Gef&uuml;hl, wenn du nicht wei&szlig;t ob du wach bist oder noch tr&auml;umst?! - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Computer sind gro&szlig;artig. Mit ihnen macht man die Fehler viel schneller. - Bert. Sutherland</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ich glaube nur an Statistiken, die ich selbst gef&auml;lscht habe. - Winston Churchill</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Willkommen zu meiner Show "Hack the Planet"! - Hackers</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Man kann alles richtig machen und doch das Wichtigste vers&auml;umen. - Alfred Andersch</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> 'Vern&uuml;nftig' ist in den Augen der meisten Menschen, wor&uuml;ber sich die meisten Menschen einig sind; 'vern&uuml;nftig' hat f&uuml;r die meisten nichts mit Vernunft zu tun. - Erich Fromm</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Diplomatie ist die Kunst, mit hundert Worten zu verschweigen, was man mit einem einzigen Wort sagen k&ouml;nnte. - Saint-John Perse</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> I worry about my child and the Internet all the time, even though she's too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say 'Daddy, where were you when they took freedom of the press away from the Internet?' - Mike Godwin</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ich sah die besten K&ouml;pfe meiner Generation zerst&ouml;rt vom Wahnsinn, ausmergelt hysterisch nackt, wie sie im Morgengrauen sich durch die Nebenstra&szlig;en schleppten auf der Suche nach einer w&uuml;tenden Spritze, Hipster mit Engelsk&ouml;pfen, s&uuml;chtig nach dem alten himmlischen Kontakt zum Sternendynamo in der Maschinerie der Nacht. - Ginsberg</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Intelligence is the ability to adapt to change. - Stephen Hawking </p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Welt hat nie eine gute Definition f&uuml;r das Wort Freiheit gefunden. - Abraham Lincoln</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Welt ist im Wandel. Ich sp&uuml;re es im Wasser. Ich sp&uuml;re es in der Erde. Ich rieche es in der Luft. Vieles, was einst war, ist verloren, da niemand mehr lebt, der sich erinnert. - Galadriel</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Menschen wollten Roboter erfinden, nun sind sie selbst welche. - Peter Sunde</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Lehre von der Freiheit des Willens ist eine Erfindung herrschender St&auml;nde. - Friedrich Nietzsche</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ungeweihnte Tr&auml;nen sind die schlimmsten.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> In einem Meer von Schmerz ertrinken die einen; die anderen lernen, darin zu schwimmen.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Nicht alle sind gl&uuml;cklich,die gl&uuml;cklich scheinen.Manche lachen nur,um nicht zu weinen.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> A strange game. The only winning move is not to play. - wargames</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das Unbewu&szlig;te ist viel moralischer, als das Bewu&szlig;te wahrhaben will. -  Sigmund Freud</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Warum tun meine Augen so weh? ... Weil du sieh noch nie benutzt hast. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Linux ist wie eine Freundin.Sch&ouml;n, sexy und naja, ganz viel rumfummeln.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Yes, I am a criminal.  My crime is that of curiosity.  My crime is that of judging people by what they say and think, not what they look like. My crime is that of outsmarting you, something that you will never forgive me for. - Loyd Blankenship (The Mentor)</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> In vielen der etwas l&auml;ssigeren Zivilisationen am &auml;u&szlig;ersten Ostrand der Galaxis hat Sie die gro&szlig;e Encyclopaedia Galactica als Standard-Nachschlagewerk f&uuml;r alle Kenntnisse und Weisheiten inzwischen l&auml;ngst abgel&ouml;st. Denn obwohl sie viele L&uuml;cken hat und viele Dinge enth&auml;lt, die sehr zweifelhaft oder zumindest wahnsinnig ungenau sind, ist sie dem &auml;lteren und viel langatmigeren Werk in zweierlei Hinsicht &uuml;berlegen. Erstens ist sie ein bisschen billiger und zweitens stehen auf ihrem Umschlag in gro&szlig;en, freundlichen Buchstaben die Worte KEINE PANIK. - Per Anhalter durch die Galaxis</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Apokalypse des Seins ist seine reflexion. </p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wer von Hoffnung lebt, wird eines Tages verhungern.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wenn man einem Menschen trauen kann, er&uuml;brigt sich ein Vertrag. Wenn man ihm nicht trauen kann, ist ein Vertrag nutzlos. - Jean Paul Getty</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Man kann das Leben nur r&uuml;ckw&auml;rts verstehen, aber man muss es vorw&auml;rts leben.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Was man zu verstehen gelernt hat, f&uuml;rchtet man nicht mehr. - Marie Curie</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> A strange game. The only winning move is not to play. - Wargames</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Weil Denken die schwerste Arbeit ist, die es gibt, besch&auml;ftigen sich auch nur wenige damit. - Henry Ford</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wenn wir die Gr&uuml;nde f&uuml;r das Verhalten der anderen verstehen k&ouml;nnten, w&uuml;rde pl&ouml;tzlich alles einen Sinn ergeben. - Sigmund Freud</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Der arme Nutzer erh&auml;lt ein Seil, mit dem er sich selbst erh&auml;ngen kann - das ist etwas, was ein Standard nicht tun sollte - Ron Rivest</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Bevor wir die Welt ver&auml;ndern, sollten wir daf&uuml;r sorgen sie nicht zu Grunde zu richten!</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es n&uuml;tzt der Freiheit nichts, dass wir sie abschaffen, um sie zu sch&uuml;tzen. - Wolfgang Thierse</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Nur der ist weise, der wei&szlig;, da&szlig; er es nicht ist - Sokrates</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Ich wei&szlig; nicht immer wovon ich rede, aber ich wei&szlig;, dass ich recht habe! - Muhammed Ali</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Treffen sich zwei Planeten. Sag der Eine: Wie geht es? Antwortet der Andere: Schlecht, ich habe Menschen. Sagt der Erste: Das hatte ich auch mal, das geht vorbei.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Derjenige, der seinen Trieb verleugnet, verleugnet genau das, was ihn zum Menschen macht. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Wenn Baumeister Geb&auml;ude bauten, so wie Programmierer Programme machen, dann w&uuml;rde der erste Specht, der vorbeikommt, die Zivilisation zerst&ouml;ren. - Edward A. Murphy</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Niemand kennt den Tod. Es wei&szlig; auch keiner, ob er nicht das gr&ouml;&szlig;te Geschenk f&uuml;r den Menschen ist.</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Es gab eine Zeit, als Zeitungen sagten, nur zw&ouml;lf Menschen verst&uuml;nden die Relativit&auml;tstheorie. Ich glaube nicht, dass es jemals eine solche Zeit gab. Auf der anderen Seite denke ich, es ist sicher zu sagen, niemand versteht Quantenmechanik. - Richard P. Feynman</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Von den vielen Dingen die verloren mir sind gegangen hab ich am meisten an meinem Verstand gehangen - Ozzy Osbourne</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Willkommen in der W&uuml;ste der Wirklichkeit. - Matrix</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Revolutionen sind Zeiten, in denen der Arme seiner Rechtschaffenheit, der Reiche seines Reichtums und der Unschuldige seines Lebens nicht sicher ist. - Joseph Joubert</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Was isst ein Informatiker morgens um halb 10 in Deutschland?  ... Knoppix - Filou</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Kenne Dich selbst, kenne Deinen Feind und Du musst einhundert Schlachten nicht f&uuml;rchten - Sun Tzu</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die Menschheit ist zu weit vorw&auml;rts gegangen, um sich zur&uuml;ckzuwenden und bewegt sich zu rasch, um anzuhalten. - Winston Churchill</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt. - Albert Einstein</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Die meisten Computerprobleme sitzen zwischen Tastatur und Stuhl. - Klaus Klages</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Erst kommt das Fressen, dann die Moral. - Bertolt Brecht</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Je mehr die Menschen haben, desto mehr begehren sie. - Justinus</p></div></li>
-<li style="list-style:none;"><div><p><img src="img/quote.png" width="20" alt="img/quote" /> Das Leben ist eine Chance - nutze sie. <br>Das Leben ist Sch&ouml;nheit - bewundere sie. <br>Das Leben ist Seligkeit - genie&szlig;e sie.<br>Das Leben ist ein Traum - mach daraus Wirklichkeit.<br>Das Leben ist eine Herausforderung - stelle dich ihr.<br>Das Leben ist Pflicht - erf&uuml;lle sie.<br>Das Leben ist ein Spiel - spiele es.<br>Das Leben ist kostbar - geh sorgf&auml;ltig damit um.<br>Das Leben ist Reichtum - bewahre ihn.<br>Das Leben ist Liebe - erfreue dich an ihr.<br>Das Leben ist ein R&auml;tsel - durchdringe es.<br>Das Leben ist ein Versprechen - erf&uuml;lle es.<br>Das Leben ist Traurigkeit - &uuml;berwinde sie.<br>Das Leben ist eine Hymne - singe sie.<br>Das Leben ist eine Trag&ouml;die - ringe mit ihr.<br>Das Leben ist ein Abenteuer - wage es.<br>Das Leben ist Gl&uuml;ck - verdiene es.<br>Das Leben ist das Leben - verteidige es. - Mutter Teresa</p></div></li>
-				</ul>
-			</div>
-		</div>
-	</body>
+        #myimg {
+            border-radius: 50%;
+            top: -75px;
+            right: -75px;
+            height: 150px;
+            position: absolute;
+        }
+    </style>
+
+    <script src="https://unpkg.com/3d-force-graph"></script>
+    <title>Thomas Wollmann</title>
+</head>
+
+<body>
+    <div id="3d-graph"></div>
+
+    <script type="module">
+        import { UnrealBloomPass } from 'https://cdn.skypack.dev/three@0.136/examples/jsm/postprocessing/UnrealBloomPass.js';
+        const N = 50;
+        const gData = {
+            nodes: [...Array(N).keys()].map(i => ({ id: i })),
+            links: [...Array(N).keys()]
+                .filter(id => id)
+                .map(id => ({
+                    source: id,
+                    target: Math.round(Math.random() * (id - 1))
+                }))
+        };
+
+        const distance = 300;
+        const Graph = ForceGraph3D()
+            (document.getElementById('3d-graph'))
+            .enableNodeDrag(false)
+            .enableNavigationControls(false)
+            .showNavInfo(false)
+            .cameraPosition({ z: distance })
+            .nodeAutoColorBy('group')
+            .graphData(gData);
+
+        const bloomPass = new UnrealBloomPass();
+        bloomPass.strength = 2;
+        bloomPass.radius = 1;
+        bloomPass.threshold = 0.1;
+        Graph.postProcessingComposer().addPass(bloomPass);
+
+        let angle = 0;
+        setInterval(() => {
+            Graph.cameraPosition({
+                x: distance * Math.sin(angle),
+                z: distance * Math.cos(angle)
+            });
+            angle += Math.PI / 600;
+        }, 40);
+    </script>
+    <div id="box" class="d-flex align-items-center col-6">
+        <div class="container card" id="mycard">
+            <div class="row align-items-center">
+                <div class="col" style="padding-left: 25px;">
+                    <div class="row">
+                        <a href="https://www.linkedin.com/in/thomas-wollmann-876054185/" target="blanc">
+                            <img src="img/linkedin-logo.png" height="30"
+                                style="margin-top:5px;margin-bottom:5px;border:0;" alt="linkedin logo" />
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="https://www.xing.com/profile/Thomas_Wollmann8" target="blanc">
+                            <img src="img/xing-logo.png" height="30" style="margin-top:5px;margin-bottom:5px;border:0;"
+                                alt="xing logo" />
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="https://scholar.google.de/citations?user=H8tlV-oAAAAJ" target="blanc">
+                            <img src="img/googlescholar-logo.png" height="30"
+                                style="margin-top:5px;margin-bottom:5px;border:0;" alt="google logo" />
+                        </a>
+                    </div>
+                    <div class="row"">                        
+                        <a href=" https://researchgate.net/profile/Thomas_Wollmann" target="blanc">
+                        <img src="img/researchgate-logo.jpg" height="30"
+                            style="margin-top:5px;margin-bottom:5px;border:0;" alt="researchgate logo" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-none d-md-block">
+                    <h3 class="text-center">Thomas Wollmann</h3>
+                </div>
+                <div class="col">
+                    <img id="myimg"
+                        src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=H8tlV-oAAAAJ&citpid=4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
