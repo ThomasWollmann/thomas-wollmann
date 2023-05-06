@@ -144,6 +144,8 @@
 
             init()
 			animate();
+            onWindowResize();
+            window.addEventListener( 'resize', onWindowResize );
 
 			function init() {
                 camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
@@ -170,10 +172,6 @@
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				container.appendChild( renderer.domElement );
-
-				onWindowResize();
-
-				window.addEventListener( 'resize', onWindowResize );
             }
 
             function onWindowResize() {
